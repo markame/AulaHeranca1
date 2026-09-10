@@ -15,6 +15,10 @@ Console.WriteLine("Data de Nascimento: " + aluno.DataNascimento);
 Console.WriteLine("Data de Entrada: " + aluno.Dataentrada.
     ToString("dd/MM/yyyy"));
 
+ConexaoSqlite conexao = new ConexaoSqlite();
+conexao.Criarconexao();
+conexao.InserirAluno(aluno);
+
 Professor professor = new Professor();
 professor.None = "João da Silva";
 professor.Email ="joao@gmail.com";
